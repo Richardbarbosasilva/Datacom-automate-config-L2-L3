@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>switchesconfiguration</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+		  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="swconfig.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="logoswitch">
+	<img src="switch.jpg" width="200px" height="200px";><br>
+	<div class="logoswitchphrase">
+	<p1> DM 4370 L3 (MPLS)</p1>
+</div>
+	</div>
+</div>
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="col-md-6 pt-5">
+					<div id="tree">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+
+	<script src="swconfig.js">
+	</script>
+	<script>
+		$(function () {
+
+			var json = [
+				{
+					text: "Configurações Gerais",
+					icon: "fa fa-server",
+					nodes: [
+						{
+							
+							
+							text: "config2",
+							icon: "fa fa-folder",
+							nodes: [
+								{
+									icon: "fa fa-folder",
+									text: "Config3"
+								},
+								{
+									icon: "fa fa-folder",
+									text: "Config5"
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config6"
+								}
+								
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config7"
+								}
+								
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config8"
+								}
+								
+								
+							
+								
+								
+							]
+							
+						},	{
+							
+							
+							text: "config2",
+							icon: "fa fa-folder",
+							nodes: [
+								{
+									icon: "fa fa-folder",
+									text: "Config3"
+								},
+								{
+									icon: "fa fa-folder",
+									text: "Config5"
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config6"
+								}
+								
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config7"
+								}
+								
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config8"
+								}
+								
+								
+							
+								
+								
+							]
+							
+						},	{
+							
+							
+							text: "config2",
+							icon: "fa fa-folder",
+							nodes: [
+								{
+									icon: "fa fa-folder",
+									text: "Config3"
+								},
+								{
+									icon: "fa fa-folder",
+									text: "Config5"
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config6"
+								}
+								
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config7"
+								}
+								
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Config8"
+								}
+								
+								
+							
+								
+								
+							]
+							
+						},
+						{
+							icon: "fa fa-folder",
+							text: "config5"
+						}
+					]
+				},
+				{
+					icon: "fa fa-folder",
+					text: "config6"
+				},
+				{
+					icon: "fa fa-folder",
+					text: "config7"
+				},
+				{
+					icon: "fa fa-folder",
+					text: "Config8"
+				},
+				{
+					icon: "fa fa-folder",
+					text: "config9"
+				},
+                {
+                    icon: "fa fa-folder",
+					text: "Go to Google",
+                    class: "text-info",
+                    href: "https://google.com"
+                }
+			];
+
+			$('#tree').bstreeview({
+				data: json,
+                expandIcon: 'fa fa-angle-down fa-fw',
+                collapseIcon: 'fa fa-angle-right fa-fw',
+                indent: 1.25,
+                parentsMarginLeft: '1.25rem',
+                openNodeLinkOnNewTab: true
+			});
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

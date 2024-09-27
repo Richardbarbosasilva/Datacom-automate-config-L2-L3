@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Richard Barbosa Silva">
+<title>Selection page</title>
+    
+<!-- Chamar o bootstrap e o arquivo js  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="sw.css">
+</head>
+<body>
+   
+<!-- sticky navbar top -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#header"><strong>Configuração-Switches</strong></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse">
+  <ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+  <button onclick="dm2104()" class="navbarbutton1" type="button">DM2104-MANUAL</button>
+  </li>
+  <li class="nav-item">
+  <button onclick="dm2106()" class="navbarbutton1" type="button">DM2106-MANUAL </button>
+  </li>
+  <li class="nav-item">
+  <button onclick="dm2500()" class="navbarbutton1" type="button">DM2500-MANUAL</button>
+  </li>
+  <li class="nav-item">
+  <button onclick="dm4270()" class="navbarbutton1" type="button">DM4270-MANUAL</button>
+  </li>
+  <li class="nav-item">
+  <button onclick="dm4360()" class="navbarbutton1" type="button">DM4360-MANUAL</button>
+  </li>
+  <li class="nav-item">
+  <button onclick="dm4370()" class="navbarbutton1" type="button">DM4370-MANUAL</button>
+  </li>
+  <li class="nav-item">
+  <button onclick="dm4615()" class="navbarbutton1" type="button">DM4615-MANUAL</button>
+  </li>
+  <li class="nav-item">
+  <button onclick="dm4618()" class="navbarbutton1" type="button">DM4618-MANUAL</button>
+  </li>
+  </ul>
+  <img id="clickipnavbarlogo" src="clickipnobackground.png" class = "rodape" alt ="logonavbar"> 
+  </div>
+
+  <ul class="menu">
+  <li><i class="gg-code-slash"></i></li>
+  <li><i class="gg-copy"></i></li>
+  <li><i class="gg-data"></i></li>
+  <li><i class="gg-smartphone-ram"></i></li>
+  <li><a class="btn btn-primary buttonmenu5" onclick="CNL()" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample" id="CNL">Lista regional do Código Nacional de Localidades (CNL)</a></li>
+
+  
+  <p class="d-inline-flex gap-1">
+  <a class="btn btn-primary buttonmenu2" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">Tecnologias Utilizadas</p></a>
+  <li><i class="gg-file-document"></i></li>
+  <div class="collapse" id="collapseExample1">
+  <div class="card card-body"> <ol type="1">
+  <li><p class="titlefrontendicon">FRONT-END &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BACK-END / API</p>
+  <img src="frontend.png" width="40px" height="40px" class = "frontendicon"></li>
+  <img src="jqueryicon.png" class="framework1">    
+  <img src="bootstrapicon.png" class="framework2">
+  <img src="tailwindicon.png" class="framework3">
+  <img src="python.png" class="framework4">
+  <img src="flaskicon.png" class="framework5">
+  <img src="netmikoicon.png" class="framework6">
+  </div>
+  </div>
+  </li>
+  <li>
+  <p class="d-inline-flex gap-1">
+  <a class="btn btn-primary buttonmenu3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Sobre</p></a>
+  <div class="collapse" id="collapseExample">
+  <div class="card card-body"> Este projeto foi idealizado com o objetivo de criar uma plataforma para a configuração de switches Datacom L2/L3 
+              de modo a auxiliar e aumentar a produtividade 
+              <br> do setor NOC responsável pela configuração e monitoramento de dispositivos de rede diversos. 
+              Dessa forma, esta aplicação fornece um sistema que possibilita a 
+              <br> configuração de variados switches de forma mais rápida e automatizada, sem a necessidade 
+              de muito conhecimento técnico do processo, fornecendo uma interface
+              <br> de usuário amigável para o procedimento. Dentre as funcionalidades deste projeto está a capacidade de configurar de forma massiva múltiplos switches com todos 
+              <br> os elementos necessários
+               para deixá-los prontos para uso imediato.</div>
+  </div>
+  </li>
+  <li>
+  <p class="d-inline-flex gap-1">
+  <a class="btn btn-primary buttonmenu4" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample"> Funcionalidades Gerais de Aplicação</p></a> 
+  <div class="collapse" id="collapseExample2">
+  <div class="card card-body cardfinal"> 
+  <img src="terminal.gif" class="funcionality1">
+  <p class="funcionalitytext1">Conexão Via SSH</p>
+  <img src="switchicon.png" class="funcionality2">
+  <p class="funcionalitytext2">Automação de Configurações Globais</p>
+  <img src="icons8-settings.gif" class="funcionality3">
+  <p class="funcionalitytext3">Replicação em Cascata</p>
+  <img src="UI.gif" class="funcionality4">
+  <p class="funcionalitytext4">Interface intuitiva GUI</p>
+  </div>
+  </div>
+  </li>
+  </ul>
+  <button class="hamburger">
+
+  <!-- material icons https://material.io/resources/icons/ -->
+
+  <i class="menuIcon material-icons">menu</i>
+  <i class="closeIcon material-icons">close</i>
+  </button>  
+  </nav>
+  </div>
+
+  <!-- background image -->
+
+  <div class="background">
+  </div>
+
+  <!-- título central -->
+
+  <div class = "elements">
+  <div class = "title">   
+  </div>
+    
+    
+  <!-- imagens e botões da página -->
+  <!-- Imagem do background -->
+
+  <img src="dm4370.png" width = "400p" height= "300px" class = "img-fluid" alt ="Switch DM4370/MPLS">
+  <button onclick="dm4370config()" class="btn btn-primary" type="button">DM4370 L3 / MPLS</button>
+
+  <img src="dm4360.png" width = "400px" height= "300px" class = "img-fluid2" alt ="Switch DM4360/MPLS">
+  <button onclick="dm4360config()" class="btn btn-primary" type="button">DM4360 L3 / MPLS</button>
+
+  <img src="dm2104.png" width = "150px" height="200px" class = "img-fluid3" alt ="Switch DM2104 L2 sem MPLS">
+  <button onclick="dm2104config()" class="btn btn-primary" type="button">DM2104L2/NoMPLS</button>
+   
+  <img src="dm2500.png" width = "150px" height="200px" class = "img-fluid4" alt ="Switch DM2500 L2 sem MPLS">    
+  <button onclick="dm2500config()" class="btn btn-primary" type="button">DM2500L2/NoMPLS</button>
+
+  <img src="dm4615.png" width = "150px" height="200px" class = "img-fluid5" alt ="Switch DM4615 L2 sem MPLS">
+  <button onclick="dm4615config()" class="btn btn-primary" type="button">DM4615 L3 / MPLS</button>
+  
+  <img src="dm2104.png" width = "150px" height="200px" class = "img-fluid8" alt ="Switch DM2104 L2 sem MPLS">
+  <button onclick="dm2106config()" class="btn btn-primary" type="button">DM2106L2/NoMPLS</button>
+
+  <img src="DM_4270_48XS+6CX_c-removebg-preview.png" width = "150px" height="200px" class = "img-fluid7" alt ="Switch DM4615 L2 sem MPLS">
+  <button onclick="dm4270config()" class="btn btn-primary" type="button">DM4270 L3 / MPLS</button>
+   
+  <img src="DM4618.png" width = "" height="" class = "img-fluid6" alt ="Switch DM4615 L2 sem MPLS">
+  <button onclick="dm4618config()" class="btn btn-primary" type="button">DM4618 L3 / MPLS</button>
+  <footer>
+  <p class="copyright">&copy; 2024 - Todos os direitos reservados</p>
+  <div class = "rodape">
+  <img src="logoclickip.png" width = "20px" height="20px" class = "rodape" alt ="logoclickiprodape">
+  </div>	
+
+  <figure>
+    <a style="text-decoration: none;" href="https://www.facebook.com/wiretelecom.com.br" target="_blank">
+    <img src="https://w1.pngwing.com/pngs/9/229/png-transparent-facebook-social-media-icons-facebook-f8-like-button-workplace-by-facebook-facebook-messenger-black-and-white-symbol-logo-thumbnail.png" width="30px" height="30px" class="icon" alt="facebook-logo">
+    </a>
+    <a style="text-decoration: none;" href="https://www.instagram.com/wiretelecom.com.br" target="_blank">
+    <img src="https://fejamaceio.org.br/wp-content/uploads/2019/04/icone-instagram-03.jpg" width="30px" height="30px" class="icon" alt="instagram-logo" >
+    </a>
+    <a style="text-decoration: none;" href="https://www.linkedin.com/company/grupo-clickip-tecnologia/" target="_blank">
+    <img src="https://i.pinimg.com/564x/d9/d9/5e/d9d95ee468e97317a201ef33b02067ac.jpg" width="30px" height="30px" class="icon" alt="linkedin-logo">
+    </a>
+    </figure>
+    <p>Setor de Tecnologia da Informação - Wire Telecom</p>
+    
+	  <nav>
+    <ul>
+  <!-- teste -->
+  
+
+	<li><a style= "margin-left:-30px"href="https://wiretelecom.com.br/">Sobre nós
+  </a>
+  </li>
+  </ul>
+  </nav>
+  </footer>
+  <div>
+  <img src="wirelogowhite.png" width = "120px" height="60px" class = "logo1" alt ="logo clickip rodape">
+  </div>
+  </div>
+  <div class="righticonnavbar"></div>
+  <script src="sw.js" rel> </script>
+  <script src="swconfig.js"> rel </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+

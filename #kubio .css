@@ -1,0 +1,11 @@
+#kubio .style-Y5REORUS2cs-inner {
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0px 19px 38px 0px rgba(var(--kubio-color-1-variant-5), 0.2);
+    background-color: rgba(var(--kubio-color-5), 1);
+    min-height: 479px;
+    transform: translateX(0px) translateY(0px);
+    transform-origin: center center 0px;
+    left: 18px;
+    min-width: min-content;
+}

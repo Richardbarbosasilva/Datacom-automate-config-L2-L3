@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title> DM4370 CONFIG</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="icon" type="image/png" sizes="32x32" href="headimage.png">
+	<link href="swconfig.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="logoswitch">
+<img src="switch-removebg-preview.png" width="200px" height="200px";><br>
+<div class="logoswitchphrasedmL3">
+<p1> DM 4370 L3 (MPLS)</p1>
+</div>
+</div>
+</div>
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+<ol class="breadcrumb homepage">
+<li class="breadcrumb-item"><a class="homepagebar1" href="sw.html">Home</a></li>
+<li class="breadcrumb-item active homepagebar2" aria-current="page">Configuração Switch DATACOM DM4370</li>
+<i class="gg-profile"></i>
+<p class="homepagebar2 profiletext">Bem-vindo Suporte!</p>   
+</ol>
+</nav>
+<img id="clickipnavbarswitchconfig" src="clickipnobackground.png" width="70px" height="50px" >
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="col-md-6 pt-5">
+					<div id="tree">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+
+<!-- js incorporado ao html diretamente -->
+<p class="warning">NOTA: Este Script foi desenvolvido para EDD's com versões de firmware a partir da 5.10. Caso o EDD a ser configurado 
+	esteja com versão de firmware inferior, favor realizar a atualização do mesmo. Caso tenha dúvidas no procedimento de atualização,
+	 entre em contato com o suporte técnico Datacom.		
+</p>
+
+
+<script>
+	$(function () {
+			var json = [
+				{
+					text: "Configurações Gerais",
+					icon: "fa fa-server",
+					nodes: [
+						       {
+							
+						    text: "Parâmetros pré-definidos",
+							icon: "fa fa-folder",
+							nodes: [
+
+								{
+									icon: "fa fa-folder",
+									text: "Nome de Host",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Fuso-Horário e Zona",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Interface VLAN-1",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Grupo-VLAN-1",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "interface eth range 1/1 1/2"
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "mgmt-eth",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Dispositivos remotos",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Servidor TELNET",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Servidor HTTP",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Servidor SNMP",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Servidor SNTP",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: " TACACS ",
+								}	
+							]			
+						}
+						,	
+						
+						        {
+							
+							        text: "Parâmetros configuráveis",
+							        icon: "fa fa-folder",
+							        nodes: [
+						
+								{
+									icon: "fa fa-folder",
+									text: "interface VLAN-2",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "interface eth range 1/5 1/6",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "ip default-gateway",
+								}
+							]
+						}
+						,	
+					]
+				}
+				,
+			];
+
+			$('#tree').bstreeview({
+				data: json,
+                expandIcon: 'fa fa-angle-down fa-fw',
+                collapseIcon: 'fa fa-angle-right fa-fw',
+                indent: 1.25,
+                parentsMarginLeft: '1.25rem',
+                openNodeLinkOnNewTab: true
+			});
+		});
+</script>
+
+<div class="d-grid gap-2 d-md-block">
+</div>
+<div class="leftmenu"></div>
+
+<!------------------------------------------ menus de topologia ----------------------------------->
+
+<p class="topologiamenu">TOPOLOGIAS EDD DATACOM</p>
+
+<img class="topologiaicon" src="networkicon.gif" width="80px" height="80px">
+<img class="topologiaicon2" src="networkicon.gif" width="80px" height="80px">
+<img class="topologiaicon3" src="networkicon.gif" width="80px" height="80px">
+<img class="topologiaicon4" src="networkicon.gif" width="80px" height="80px">
+<img class="topologiaicon5" src="networkicon.gif" width="80px" height="80px">
+<img class="topologiaicon6" src="networkicon.gif" width="80px" height="80px">
+
+<div class="linhacentral"></div>
+
+<!-- EDD METRO DROPDOWN TOPOLOGY ( DMSWITCH OS)-->
+
+<div class="btn-group fixcarddropdown ">
+	<button type="button" class=" dropdown-toggle dropdown-toggle-split buttontopologiaicon" data-bs-toggle="dropdown" aria-expanded="false">
+	  <span class="visually-hidden "> DMSWITCH EDD METRO <br> </span>
+	</button>
+	<ul class="dropdown-menu testebutton">
+	  <li><div class="card cardsize" style="width: 18rem;">
+		<img src="topologiametrocliente.png" class="card-img-top " alt="card">
+		<div class="card-body cardflow ">
+		  <h5 class="card-title cardtext">Topologia EDD METRO</h5>
+		  <p class="card-text">
+			Topologia de Rede Metropolitana EDD
+No contexto de Dados Distribuídos Empresariais (EDD), uma topologia de rede metropolitana desempenha um papel crucial na interconexão de data centers geograficamente dispersos ou locais empresariais dentro de uma área metropolitana. Aqui está uma análise das principais características e considerações:
+Componentes:
+Rede Central: O backbone da rede metropolitana, normalmente consistindo de conexões de alta largura de banda e alta disponibilidade, como cabos de fibra óptica. Ele fornece o caminho principal para troca de dados entre diferentes sites.
+Camada de Agregação: Switches ou roteadores que agregam tráfego de dispositivos da camada de acesso e os conectam à rede central.
+Camada de Acesso: Switches ou roteadores que fornecem pontos de conexão direta para dispositivos de usuários, servidores e outros equipamentos de rede dentro de cada local da empresa.
+		  </p>
+		  <a href="#" class="btn btn-primary metrobutton" onclick="gotoscriptpage()">Configurar esta topologia</a>
+		</div>
+	  </div>
+	</li>
+</ul>
+
+
+<!-- EDD BUTTON DROPDOWN TUNNELING -->
+
+	  <div class="btn-group">
+		<button type="button" class=" dropdown-toggle dropdown-toggle-split buttontopologiaicon2" data-bs-toggle="dropdown" aria-expanded="false">
+		  <span class="visually-hidden">VPLS TUNNELING</span>
+		</button>
+		<ul class="dropdown-menu">
+		  <li><div class="card cardsize" style="width: 18rem;">
+			<img src="vplstopology.png" class="card-img-top" alt="...">
+			<div class="card-body cardflow">
+			  <h5 class="card-title"> Topologia VPLS</h5>
+			  <p class="card-text">Equipamento de Rede - Interface E1 (Datacom):
+
+				Uma topologia VPLS (Virtual Private LAN Service) é uma solução de rede que utiliza
+				 MPLS (Multiprotocol Label Switching) para criar VPNs Layer 2 sobre uma rede Layer 3.
+				Isso permite que você conecte segmentos de LAN geograficamente dispersos como se 
+				fossem uma única rede Layer 2, estendendo sua rede virtual privada por grandes 
+				distâncias.
+				
+				</p>
+			  <a href="#" class="btn btn-primary metrobutton" onclick="gotoscriptpagevpls()">Configurar Tunelamento VPLS</a>
+			</div>
+		  </div>
+		</li>
+	</ul>
+
+		  <div class="btn-group">
+			<button type="button" class=" dropdown-toggle dropdown-toggle-split buttontopologiaicon3" data-bs-toggle="dropdown" aria-expanded="false">
+			  <span class="visually-hidden">EDD ENLACE <br> (Conversor eletro-óptico)</span>
+			</button>
+			<ul class="dropdown-menu">
+			  <li><div class="card cardsize" style="width: 18rem;">
+				<img src="topologiaeddenlace.png" class="card-img-top" alt="...">
+				<div class="card-body cardflow">
+				  <h5 class="card-title"> Topologia EDD ENLACE</h5>
+				  <p class="card-text">
+					EDD enlace se refere a uma conexão fornecida por um dispositivo fabricado pela Datacom. Isso pressupõe 
+					que o dispositivo Datacom tenha alguma funcionalidade de roteamento ou switching, 
+					permitindo que ele estabeleça enlaces (conexões) com outras redes.
+                    Por exemplo, imagine que você tenha um roteador Datacom específico que permita conectar sua rede local 
+                    a uma linha telefônica E1 (padrão de telecomunicação digital). Nesse caso, "EDD enlace" poderia se referir à conexão estabelecida pelo roteador Datacom com a linha E1.
+				  </p>
+				  <a href="#" class="btn btn-primary metrobutton" onclick="gotoscriptpage()">Configurar esta topologia</a>
+				</div>
+			  </div>
+			</li>
+		</ul>
+
+			  <div class="btn-group">
+				<button type="button" class=" dropdown-toggle dropdown-toggle-split buttontopologiaicon4" data-bs-toggle="dropdown" aria-expanded="false">
+				  <span class="visually-hidden">EDD METRO <br> (2 Circuitos)</span>
+				</button>
+				<ul class="dropdown-menu">
+				  <li><div class="card cardsize" style="width: 18rem;">
+					<img src="topologiaeddmetro2circuitos.png" class="card-img-top" alt="...">
+					<div class="card-body cardflow">
+					  <h5 class="card-title">TOPOLOGIA EDD METRO 2 CIRCUITOS</h5>
+					  <p class="card-text">
+				Se refere à Topologia de Rede Metropolitana para Dados Distribuídos Empresariais (EDD).
+                Aqui's uma explicação:
+                Dados Distribuídos Empresariais (EDD): Este termo descreve um cenário onde uma empresa possui dados armazenados e acessados em vários locais geograficamente dispersos. Isso pode incluir data centers, filiais, escritórios remotos e nuvens públicas ou privadas.
+                Rede Metropolitana: 
+                Uma rede metropolitana é uma rede de alta velocidade e alta capacidade que interconecta diferentes locais dentro de uma área metropolitana (cidade ou região).
+                Topologia de Rede:  
+                A topologia de rede define a estrutura de como os dispositivos em uma rede estão interconectados.  No contexto de EDD Metro, a topologia determina como os diferentes locais da empresa se conectam entre si para compartilhar e acessar dados distribuídos.
+					  </p>
+					  <a href="#" class="btn btn-primary metrobutton" onclick="gotoscriptpage()">Configurar esta topologia</a>
+					</div>
+				  </div>
+				</li>
+			</ul>
+		
+			<!-- final button -->
+			
+				  <div class="btn-group">
+					<button type="button" class=" dropdown-toggle dropdown-toggle-split buttontopologiaicon5" data-bs-toggle="dropdown" aria-expanded="false">
+					  <span class="visually-hidden">EDD METRO + E1</span>
+					</button>
+					<ul class="dropdown-menu">
+					  <li><div class="card cardsize" style="width: 18rem;">
+						<img src="topologiametro+e1.png" class="card-img-top" alt="...">
+						<div class="card-body cardflow">
+						  <h5 class="card-title">TOPOLOGIA EDD METRO</h5>
+						  <p class="card-text">
+							EDD Metro e E1, quando combinados, sugerem duas possíveis interpretações relacionadas à conectividade de rede em um contexto de Dados Distribuídos Empresariais (EDD) dentro de uma área metropolitana:
+							Rede Metropolitana EDD utilizando interfaces E1:
+							Aqui, EDD Metro se refere à topologia de rede metropolitana usada para interconectar sites corporativos distribuídos geograficamente dentro de uma cidade ou região.
+							A adição de "E1" indica que a rede pode estar utilizando interfaces E1 para comunicação entre os locais. E1 é um padrão de telecomunicação digital que transporta voz e dados a 2.048 Mbps, comumente usado em linhas telefônicas dedicadas.
+							Cenário: Imagine uma empresa com filiais em diferentes pontos de uma cidade. A EDD Metro seria a rede que as conecta, e o E1 poderia ser a tecnologia usada para estabelecer essas conexões através de linhas telefônicas alugadas.
+						  </p>
+						  <a href="#" class="btn btn-primary metrobutton" onclick="gotoscriptpage()">Configurar esta topologia</a>
+						</div>
+					  </div>
+					</li>
+				</ul>
+
+			<!-- semifinal button -->
+
+					  <div class="btn-group">
+						<button type="button" class=" dropdown-toggle dropdown-toggle-split buttontopologiaicon6" data-bs-toggle="dropdown" aria-expanded="false">
+						  <span class="visually-hidden">EDD METRO <br> (2 Circuitos + E1)</span>
+						</button>
+						<ul class="dropdown-menu">
+						  <li><div class="card cardsize" style="width: 18rem;">
+							<img src="topologiametro2circuitos+e1.png" class="card-img-top" alt="...">
+							<div class="card-body cardflow">
+							  <h5 class="card-title">TOPOLOGIA EDD METRO<br>(2 Circuitos + E1)</h5>
+							  <p class="card-text">
+								EDD Metro com 2 circuitos + E1 descreve uma rede metropolitana para Dados 
+								Distribuídos Empresariais (EDD) que utiliza redundância para garantir a conectividade entre sites 
+								geograficamente dispersos dentro de uma área metropolitana. Aqui está uma análise:Componentes: EDD Metro: Refere-se à topologia de rede que interconecta os locais da empresa.
+								2 circuitos: Indica que a rede possui dois caminhos independentes para a transmissão de dados entre os sites. Isso fornece redundância, pois se um circuito falhar,
+								o outro ainda pode transportar o tráfego. E1: Indica o uso do padrão de telecomunicação digital E1, que opera a 2.048 Mbps, como a tecnologia subjacente para pelo menos um (ou possivelmente ambos) dos circuitos.
+							  </p>
+							  <a href="#" class="btn btn-primary metrobutton" onclick="gotoscriptpage()">Configurar esta topologia</a>
+							</div>
+						  </div>
+						</li>
+					</ul>
+
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+			<script src="swconfig.js"></script>
+	</body>
+</html>

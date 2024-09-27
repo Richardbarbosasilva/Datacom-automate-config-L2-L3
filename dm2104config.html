@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>DM2104 CONFIG</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+	integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="swconfig.css" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="headimage.png">
+
+</head>
+
+<body>
+
+<div class="logoswitch">
+	<img src="switch-removebg-preview.png" width="200px" height="200px";><br>
+	<div class="logoswitchphrasedmL2">
+	<p1> DM 2104 L2 (NoMPLS) </p1>
+</div>
+</div>
+</div>
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+	<ol class="breadcrumb homepage">
+	<li class="breadcrumb-item"><a class="homepagebar1" href="sw.html">Home</a></li>
+	<li class="breadcrumb-item active homepagebar2" aria-current="page">Configuração Switch DATACOM DM2104</li>
+	<i class="gg-profile"></i>
+    <p class="homepagebar2 profiletext">Bem-vindo Suporte!</p>   
+</ol>
+  </nav>
+  <img id="clickipnavbarswitchconfig" src="clickipnobackground.png" width="70px" height="50px" >
+
+  
+	<div class="container">
+		<div class="content">
+			<div class="row">
+				<div class="col-md-6 pt-5">
+					<div id="tree">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+
+<!-- js incorporado ao html diretamente -->
+
+<p class="warning">NOTA: Os comandos que serão enviados aos switches já estão com algumas configurações
+	<br> Pré-definidas utilizando os padrões globais estabelecidos pelas normas da empresa em Configurações Gerais > Parâmetros Pré-definidos. Você ainda poderá alterar qualquer configuração pré estabelecida como Hostname e default gateway
+	 por exemplo, se julgar necessário.</p>
+	
+
+<script src="swconfig.js"></script>
+	<script>
+		$(function () {
+
+			var json = [
+				{
+					text: "Configurações Gerais",
+					icon: "fa fa-server",
+					nodes: [
+
+					       {	
+							text: "Parâmetros pré-definidos",
+							icon: "fa fa-folder",
+							nodes: [
+								{
+									icon: "fa fa-folder",
+									text: "Nome de Host",
+								}
+								,
+
+								{
+									icon: "fa fa-folder",
+									text: "Fuso-Horário e Zona",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Interface VLAN-1",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Grupo-VLAN-1",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "interface eth range 1/1 1/2"
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "mgmt-eth",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Dispositivos remotos",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Servidor TELNET",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Servidor HTTP",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Servidor SNMP",
+								}					
+								,
+								{
+									icon: "fa fa-folder",
+									text: "Servidor SNTP",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: " TACACS ",
+								}	
+							]			
+						}
+						,	
+				
+						        {
+							        text: "Parâmetros configuráveis",
+							        icon: "fa fa-folder",
+							        nodes: [
+								{
+									icon: "fa fa-folder",
+									text: "interface VLAN-2",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "interface eth range 1/5 1/6",
+								}
+								,
+								{
+									icon: "fa fa-folder",
+									text: "ip default-gateway",
+								}
+							]
+						},	
+					]
+				},
+			];
+			$('#tree').bstreeview({
+				data: json,
+                expandIcon: 'fa fa-angle-down fa-fw',
+                collapseIcon: 'fa fa-angle-right fa-fw',
+                indent: 1.25,
+                parentsMarginLeft: '1.25rem',
+                openNodeLinkOnNewTab: true
+			});
+		});
+	</script>
+
+<!-- need still to create the logic where after the user finishes the switch config a message of confirmation will be shown in the window --> 
+
+<div class="d-grid gap-2 d-md-block">
+<button id="showMessageButton" class="btn btn-primary sendconfig" onclick="showMessage()" type="button">Prosseguir com as configurações?</button>
+</div>
+<div class="leftmenu"></div>
+<script src="swconfig.js"> rel </script>
+</body>
+</html>
