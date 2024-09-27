@@ -13,9 +13,14 @@ I provided all the packet links that are needed to replicate my actual developme
 
 ### Usage
 
-Add the following resources for the bootstrap-treeview to function correctly.
+Add the following steps:
 
-```html CDN
+```Starting
+start the loginpage.html with live server (or any other localhost server you wish)
+the GUI configuration is only set on dm4370 page!
+```
+
+```html CDN bootstrap an jquery index
 <!-- Required Stylesheets -->
 <link href="bootstrap.css" rel="stylesheet">
 
