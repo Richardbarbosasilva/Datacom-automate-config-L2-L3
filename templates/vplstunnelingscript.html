@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Topologia EDD METRO DM4370</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="icon" type="image/png" sizes="32x32" href="headimage.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='/swconfig.css') }}">
+</head>
+
+<body>
+
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb homepagescriptgenerator">
+    <li class="breadcrumb-item" > <a class="homepagebar1 homepagebarscriptgenerator" href="http://127.0.0.1:5000/vplstunneling">Deseja revisar as informações? Clique aqui!    
+    </a></li>
+    <img class="houseicon" src="static\houseicon.png" width="40px" height="40px">
+    <i class="gg-profile profilescriptgenerator"></i>
+    <p class="homepagebar2 profiletext">Bem-vindo Suporte!</p>    
+   </ol>
+    </nav>
+    
+    <img id="clickipnavbarswitchconfigscriptgenerator" src="static\clickipnobackground.png" width="70px" height="50px" >
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 pt-5">
+                        <div id="tree">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<span class="scripttext">
+<p class="scripttitlevpls">SCRIPT TUNELAMENTO VPLS (MPLS)</p>
+
+<!-- VARIABLES TO INPUT ON THE NEEDED FIELDS!!
+
+{{ user_datavpls.get('Seguimento de Rede do tunelamento VPLS') }}
+{{ user_datavpls.get('VPN do tunelamento VPLS') }}
+{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+
+{
+
+-->
+
+
+<!-- ###############
+     ### PONTA A ###
+     ###############
+
+  NOTE: IT WILL USE ONLY 'CONFIG' MODE INSTEAD OF 'CONFIG EXCLUSIVE' MODE IN SSH CONNECTION
+      
+ -->
+
+
+<p class ="" >config <br>
+no mpls l2vpn vpls-group tunnel-{{user_datavpls.get ('VLAN do tunelamento VPLS')}}<br>
+commit<br>
+
+mpls l2vpn<br>
+ vpls-group tunnel-{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+ <br>
+  vpn "{{ user_datavpls.get('VPN do tunelamento VPLS') }}
+  "<br>
+   vfi<br>
+    pw-type vlan<br>
+    neighbor 100.127.0.{{ user_datavpls.get('Seguimento de Rede do tunelamento VPLS') }}<br>
+     pw-id {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}<br>
+     pw-mtu 1600<br>
+     pw-load-balance<br>
+      flow-label both<br>
+     !<br>
+    !<br>
+   !<br>
+   bridge-domain<br>
+   dot1q {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}<br>
+    access-interface twenty-five-g-ethernet-1/1/3<br>
+    !<br>
+   !<br>
+  !<br>
+ !<br>
+!<br>
+
+top<br>
+no dot1q vlan {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}<br>
+show configuration diff<br> 
+
+commit comment "+ vpls-group tunnel-{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+{{ user_datavpls.get('VPN do tunelamento VPLS') }}
+"<br>
+!<br>
+do show mpls l2vpn vpls-group brief | include {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+<br>
+!<br>
+</p>
+<br>
+<br>
+
+<!-- ###############
+     ### PONTA B ###
+     ###############
+
+  NOTE: IT WILL USE ONLY 'CONFIG' MODE INSTEAD OF 'CONFIG EXCLUSIVE' MODE IN SSH CONNECTION
+      
+ -->
+    
+<p>
+config  exclusive<br>
+no mpls l2vpn vpls-group tunnel-{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+<br>
+commit<br>
+
+mpls l2vpn<br>
+ vpls-group tunnel-{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+ <br>
+  vpn "{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+  "<br>
+   vfi<br>
+    pw-type vlan {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+    <br>
+    neighbor 100.127.0. vpls-group tunnel-{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+    <br>
+     pw-id {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+     <br>	
+     pw-mtu 1600<br>
+     pw-load-balance<br>
+      flow-label both<br>
+     !<br>
+    !<br>
+   !<br>
+   bridge-domain<br>
+    access-interface ten-gigabit-ethernet-1/1/9<br>
+    !<br>
+    !<br>
+   !<br>
+  !<br>
+ !<br>
+!<br>
+
+top<br>
+no dot1q vlan {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+<br>
+show configuration diff<br>
+
+commit comment "+ vpls-group tunnel-{{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+{{ user_datavpls.get('VPN do tunelamento VPLS') }}
+"<br>
+!
+do show mpls l2vpn vpls-group brief | include {{ user_datavpls.get ('VLAN do tunelamento VPLS') }}
+<br>
+!<br>
+
+</p>
+
+
+<div class="backgroundscriptvpls"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://unpkg.com/imask@6/dist/imask.min.js"></script>
+
+</body>
+</html>

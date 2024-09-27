@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Topologia EDD METRO DM4370</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="static\clickipnobackground.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/swconfig.css') }}">
+  </head>
+    
+    <body>
+    <div class="logoswitchscript">
+    <img src="static\connection.gif" class="networkicon"  width="200px" height="200px">
+    <div class="logoswitchphrasedmL3scriptvpls">
+
+    <!-- Script 1 - (EDD Switch configuration) -->
+
+    <p1>TUNELAMENTO VPLS/MPLS</p1>
+    </div>
+    </div>
+    </div>
+    
+    <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb homepagescriptvpls">
+    <li class="breadcrumb-item"><a class="homepagebar1" href="http://127.0.0.1:1010/sw.html">Home</a></li>
+    <li class="breadcrumb-item active homepagebar2" aria-current="page">Configuração Switch DATACOM DM4370</li>
+    <i class="gg-profile"></i>
+    <p class="homepagebar2 profiletext">Bem-vindo Suporte!</p>    
+   </ol>
+    </nav>
+    
+    <img id="clickipnavbarswitchconfigscriptgenerator" src="static\clickipnobackground.png" width="70px" height="50px" >
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 pt-5">
+                        <div id="tree">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    
+    <!-- js incorporado ao html diretamente -->
+
+    <p class="warningscriptvpls">NOTA: Esta página foi desenvolvida para automatizar a rotina
+        de Configuração da conexãoo de protocolo VPLS (Virtual private LAN service) 
+        em switches de camada L3com MPLS de um ponto A para um ponto B e vice-versa! 	
+    </p>
+   
+<!-- forms script-->
+
+    <form class="max-w-sm mx-auto forms">
+        <div class="mb-5">
+            <p class="formsidvpls">VPN		
+            </p>   
+            <p class="formsidvpls">VLAN			
+            </p>
+            <p class="formsidvpls">Seguimento de rede (100.127.0.X)			
+        </div>    
+      </form>
+      
+ <!-- some p phrases will be put outside the form class -->
+
+<p class="formsadviceproductvpls">Caracteres permitidos: Letras maiúsculas, minúsculas e números. </p>
+<img class="circuitoicon" src="static\circuitoicon.gif">
+<img class="hostnameicon" src="static\hostnameicon.gif">
+<p class="formsadviceclientevpls">Caracteres permitidos: Letras maiúsculas, minúsculas e números.</p>
+<img class="produtoicon" src="static\produtoicon.gif">
+
+
+
+<form id="formslist" class="max-w-sm mx-auto forms2" method="post">
+        <div id="additional-phrases"></div>
+        <div class="mb-5">
+            <input type="text" id="circuitovpls" minlength="11" name="circuitovpls" maxlength="20" placeholder="Insira a VPN" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>
+          </p>   
+            <input type="text" id="clientevpls" minlength="11" maxlength="20" name="cliente" placeholder="Insira o final do ip de seguimento de rede (classe C)" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required>        
+          </p>
+
+          <script>
+
+
+ </script>
+
+   
+   <!--numerovlanmenu-->
+
+    <input type="text" id="numerovlanvpls" maxlength="4" name="name" placeholder="Informe o número da VLAN" class="numbervlanvpls shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light " required>        
+    <p class="formsadvicevpls textvlan">Informar número da Vlan (2 a 4094)			    
+    </div>
+
+    <!--TO NOT FORGET: function showscript() is first executed to block button -->
+        <!-- until any field inside the forms is not null -->
+<!-- after this it will execute the redirect function after click -->
+
+    <button type="submit" id="showMessageButtonvpls" onclick="submitDataVpls()"  class="btn btn-primary sendconfigvpls">Deseja prosseguir com a geração do script para o serviço de Tunelamento VPLS?</button>
+
+  </form>
+
+    <div class="d-grid gap-2 d-md-block">
+    </div>
+    <div class="leftmenu2vpls"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://unpkg.com/imask@6/dist/imask.min.js"></script>
+    <script src="{{ url_for('static', filename='vplstunneling.js') }}"></script>
+
+
+
+  </body>
+
+
+</html>
