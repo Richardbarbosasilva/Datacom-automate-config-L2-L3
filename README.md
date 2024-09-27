@@ -29,25 +29,7 @@ the GUI configuration is only set on dm4370 page!
 <script src="bstreeview.js"></script>
 ```
 
-The component will bind to any existing DOM element.
-
-```html login page
-loginpage.html
-```
-
-Basic usage may look something like this.
-
-```javascript
-
-function getTree() {
-  // Some logic to retrieve, or generate tree structure
-  return data;
-}
-
-$('#tree').bstreeview({ data: getTree() });
-```
-
-```python API
+```Call python API (before running the)
 
 host= '127.0.0.1', port = '5000'
 
