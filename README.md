@@ -54,7 +54,7 @@ host= '127.0.0.1', port = '1010'
 
 
 # Collecting ip and mac with ARP L2 protocol
-![alt text]([https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/edit/main/scriptpagegif.gif])
+![alt text]([https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/tree/main/scriptpagegif.gif])
 
 
 
