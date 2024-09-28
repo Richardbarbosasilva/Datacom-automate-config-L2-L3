@@ -1,4 +1,4 @@
-## Previews
+### Previews and instructions
 
 # Login page
 ![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
@@ -6,7 +6,7 @@
 # Login page
 ![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
 
-## Dependencies
+### Dependencies and enviroment
 
 I provided all the packet links that are needed to replicate my actual development enviroment (not tested with other IDEs like pycharm or browsers like firefox and so on):
 
@@ -18,6 +18,17 @@ I provided all the packet links that are needed to replicate my actual developme
 - [fontawesome v?)](https://kit.fontawesome.com/64d58efce2.js)
 - [flowbite v1.0 (>=1.0.0)](https://flowbite.com/docs/getting-started/introduction/)
 - [flask v3.0.3) (>=2.3.0)](https://flask.palletsprojects.com/en/3.0.x/)
+
+### CMD Packets
+
+In order to correctly install the enviroment you also need to install some libraries using pip packet manager:
+
+- Flask
+- Jquery
+- Bootstrap
+- Flowbite
+- Pyautogui
+- jinja2
 
 ### Usage
 
