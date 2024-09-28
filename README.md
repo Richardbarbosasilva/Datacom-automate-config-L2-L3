@@ -35,6 +35,27 @@ host= '127.0.0.1', port = '5000'
 
 ```
 
+```Default front-end port
+
+host= '127.0.0.1', port = '1010'
+
+```
+
+```live server settings.json model
+
+{
+    "liveServer.settings.file": "loginpage.html",
+    "liveServer.settings.port": 1010,
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "liveServer.settings.CustomBrowser": "chrome"
+}
+
+```
+
+
+# Collecting ip and mac with ARP L2 protocol
+![alt text](https://github.com/Richardbarbosasilva/Network-WakeonLan/blob/main/Screenshot_2.png)
+
 
 
 
