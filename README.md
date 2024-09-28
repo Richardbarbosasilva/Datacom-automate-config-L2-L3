@@ -1,3 +1,11 @@
+## Previews
+
+# Login page
+![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
+
+# Login page
+![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
+
 ## Dependencies
 
 I provided all the packet links that are needed to replicate my actual development enviroment (not tested with other IDEs like pycharm or browsers like firefox and so on):
@@ -53,11 +61,6 @@ host= '127.0.0.1', port = '1010'
 ```
 
 
-# Script page 
-![alt text]([https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
-
-# Collecting ip and mac with ARP L2 protocol
-![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
 
 
 
