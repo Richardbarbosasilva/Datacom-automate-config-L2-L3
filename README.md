@@ -1,18 +1,18 @@
 # Previews and instructions
 
-# Login page
+## Login page
 ![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
 
-# Main page
+## Main page
 ![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/mainpage.png)
 
-# Topology page
+## Topology page
 ![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/topologypage.png)
 
-# script page
+## script page
 ![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/scriptpagegif.gif)
 
-### Dependencies and enviroment
+# Dependencies and enviroment
 
 I provided all the packet links that are needed to replicate my actual development enviroment (not tested with other IDEs like pycharm or browsers like firefox and so on):
 
@@ -25,7 +25,7 @@ I provided all the packet links that are needed to replicate my actual developme
 - [flowbite v1.0 (>=1.0.0)](https://flowbite.com/docs/getting-started/introduction/)
 - [flask v3.0.3) (>=2.3.0)](https://flask.palletsprojects.com/en/3.0.x/)
 
-### CMD Packets
+# CMD Packets
 
 In order to correctly install the enviroment you also need to install some libraries using pip packet manager:
 
@@ -36,7 +36,7 @@ In order to correctly install the enviroment you also need to install some libra
 - Pyautogui
 - jinja2
 
-### Usage
+## Usage
 
 Add the following steps:
 
