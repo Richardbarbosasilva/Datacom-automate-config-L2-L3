@@ -3,8 +3,14 @@
 # Login page
 ![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
 
-# Login page
-![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/loginpage.png)
+# Main page
+![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/mainpage.png)
+
+# Topology page
+![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/topologypage.png)
+
+# script page
+![alt text](https://github.com/Richardbarbosasilva/Datacom-automate-config-L2-L3/blob/main/scriptpagegif.gif)
 
 ### Dependencies and enviroment
 
