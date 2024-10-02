@@ -54,7 +54,7 @@ the GUI configuration is only set on dm4370 page!
 <script src="bstreeview.js"></script>
 ```
 
-```Call python API (before running the)
+##Call python API (before running the)
 
 host= '127.0.0.1', port = '5000'
 
@@ -66,7 +66,7 @@ host= '127.0.0.1', port = '1010'
 
 ```
 
-```live server settings.json model
+##live server settings.json model
 
 {
     "liveServer.settings.file": "loginpage.html",
