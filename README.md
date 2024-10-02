@@ -54,7 +54,7 @@ the GUI configuration is only set on dm4370 page!
 <script src="bstreeview.js"></script>
 
 
-## Call python API (before running the)
+## Call python API (before open script page)
 ```
 host= '127.0.0.1', port = '5000'
 
