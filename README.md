@@ -45,14 +45,14 @@ start the loginpage.html with live server (or any other localhost server you wis
 the GUI configuration is only set on dm4370 page!
 ```
 
-```html CDN bootstrap an jquery index
+## html CDN bootstrap an jquery index
 <!-- Required Stylesheets -->
 <link href="bootstrap.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="jquery.js"></script>
 <script src="bstreeview.js"></script>
-```
+
 
 ## Call python API (before running the)
 
