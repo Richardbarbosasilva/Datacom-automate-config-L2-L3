@@ -14,7 +14,7 @@
 
 # Dependencies and enviroment
 
-I provided all the packet links that are needed to replicate my actual development enviroment (not tested with other IDEs like pycharm or browsers like firefox and so on):
+I provided these packet links that are needed to replicate my actual development enviroment:
 
 - [Bootstrap v5](http://getbootstrap.com/)
 - [jQuery v3.4.1 (>= 1.9.0)](http://jquery.com/)
